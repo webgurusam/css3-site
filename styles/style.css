@@ -148,3 +148,45 @@ hr {
     color: #FF4A60;
     font-size: 14px;
 }
+
+/* Responsive Layout Styles */
+
+/* styles for mobile */
+@media screen and (max-width: 576px) {
+
+    .players,
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .single-player,
+    .latest-course {
+        flex-direction: column;
+    }
+
+    .single-blog {
+        flex-direction: row-reverse;
+    }
+
+    .latest-course {
+        align-items: center;
+        width: 70%;
+    }
+
+}
+
+/* styles for tablet */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .latest-course {
+        flex-wrap: wrap;
+    }
+}
